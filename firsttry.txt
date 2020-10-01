@@ -1,0 +1,58 @@
+https://api.instagram.com/oauth/authorize
+  ?client_id=1243855132640872
+  &redirect_uri=https://sixmminc.github.io/
+  &scope=user_profile,user_media
+  &response_type=code
+
+
+
+AQB5mxAk9X_6pb3I50t_BAc43GxveUbEPpi8FsM6PKyEsVANu_KJVwItcOkgzXX7sSxIJ7XGtlTdnGpJz6gr33TPGWWo2J93SE0oiXCYrfpbaMMGh9xEYIMjhBMsdcuUQnuy1ctFrCAcngtukFq1ybaPhjsLpqXTspNJig-4XdxeEhvjWm6xo_K4Z8MsqqibjTMZT-ZetKJVpfS0N09YE9puHaYpVxrcJcyfEv0dbFY_Bg
+
+
+
+
+
+curl -X POST \
+  https://api.instagram.com/oauth/access_token \
+  -F client_id=1243855132640872 \
+  -F client_secret=e0d65e83494b2fff1ca36673bee45d98 \
+  -F grant_type=authorization_code \
+  -F redirect_uri=https://sixmminc.github.io/\
+  -F code=AQB5mxAk9X_6pb3I50t_BAc43GxveUbEPpi8FsM6PKyEsVANu_KJVwItcOkgzXX7sSxIJ7XGtlTdnGpJz6gr33TPGWWo2J93SE0oiXCYrfpbaMMGh9xEYIMjhBMsdcuUQnuy1ctFrCAcngtukFq1ybaPhjsLpqXTspNJig-4XdxeEhvjWm6xo_K4Z8MsqqibjTMZT-ZetKJVpfS0N09YE9puHaYpVxrcJcyfEv0dbFY_Bg
+
+
+
+
+{"access_token": "IGQVJWUHl2MFppTjdOaW5qbVRIY19QVk5DaGZAQY0gyT2NGRXlSa0g5ckJuNzJqb2IwdWZA5NEdPTjh5VjZAoUjRsSTNhc0t6T0VXMmRNZATZAlOEpVYnhVR0N3NFk2azNTVEJ0WFBCQmJUNlBiV2pPNUV6ZAncxcHllQ0FTcjY4", "user_id": 17841437702100017}
+
+curl -X GET \
+  'https://graph.instagram.com/17841437702100017?fields=id,username&access_token=IGQVJWUHl2MFppTjdOaW5qbVRIY19QVk5DaGZAQY0gyT2NGRXlSa0g5ckJuNzJqb2IwdWZA5NEdPTjh5VjZAoUjRsSTNhc0t6T0VXMmRNZATZAlOEpVYnhVR0N3NFk2azNTVEJ0WFBCQmJUNlBiV2pPNUV6ZAncxcHllQ0FTcjY4'
+
+
+
+  curl -X GET \
+  'https://graph.instagram.com/17841437702100017?fields=id,username,account_type,media_count&access_token=IGQVJWUHl2MFppTjdOaW5qbVRIY19QVk5DaGZAQY0gyT2NGRXlSa0g5ckJuNzJqb2IwdWZA5NEdPTjh5VjZAoUjRsSTNhc0t6T0VXMmRNZATZAlOEpVYnhVR0N3NFk2azNTVEJ0WFBCQmJUNlBiV2pPNUV6ZAncxcHllQ0FTcjY4'
+
+
+
+  curl -X GET \
+  'https://graph.instagram.com/me/media?fields=id,caption&access_token=IGQVJWUHl2MFppTjdOaW5qbVRIY19QVk5DaGZAQY0gyT2NGRXlSa0g5ckJuNzJqb2IwdWZA5NEdPTjh5VjZAoUjRsSTNhc0t6T0VXMmRNZATZAlOEpVYnhVR0N3NFk2azNTVEJ0WFBCQmJUNlBiV2pPNUV6ZAncxcHllQ0FTcjY4'
+
+
+
+  curl -X GET \
+  'https://graph.instagram.com/17841437702100017/media?fields=id,caption&access_token=IGQVJWUHl2MFppTjdOaW5qbVRIY19QVk5DaGZAQY0gyT2NGRXlSa0g5ckJuNzJqb2IwdWZA5NEdPTjh5VjZAoUjRsSTNhc0t6T0VXMmRNZATZAlOEpVYnhVR0N3NFk2azNTVEJ0WFBCQmJUNlBiV2pPNUV6ZAncxcHllQ0FTcjY4'
+
+{"data":[{"id":"17865931223030859","caption":"Relaxing evenings at the cottage \ud83d\udc86\u200d\u2640\ufe0f"},{"id":"17877503293696329","caption":"Sunday blooms \u2728\n.\n.\n.\n.\n#summer #garden #peonies #inspo #daily  #dailyinspiration #gardendesign #gardeninspiration #goldenhour #flowers"}],"paging":{"cursors":{"before":"QVFIUnA0UUZANUzNwVlFkcE8ybUxmemJSNS16MWh4TzdVbHJtR0wzWEh1dFFySFJsOFVjVmxYT2JTcTVBZAnR4QmRjdUFuakg1RGlZAeEQ0OUlIVG4yVUoyaHJn","after":"QVFIUkRXT2ctd3cyeGV2RHRzRnppajVqRld2Q3ZABbEQ3MXQ3cDFRRzJ5cU9lbTFzOHI2dkFFS2VWRjBJTFRBWVNKZAWZAyMzUzNGNKbXRfdTVRZA3c4aTNsTF9R"}}}%
+
+
+
+curl -X GET \
+  'https://graph.instagram.com/17865931223030859?fields=id,media_type,media_url,username,timestamp&access_token=IGQVJWUHl2MFppTjdOaW5qbVRIY19QVk5DaGZAQY0gyT2NGRXlSa0g5ckJuNzJqb2IwdWZA5NEdPTjh5VjZAoUjRsSTNhc0t6T0VXMmRNZATZAlOEpVYnhVR0N3NFk2azNTVEJ0WFBCQmJUNlBiV2pPNUV6ZAncxcHllQ0FTcjY4'
+
+
+
+
+
+https://scontent.cdninstagram.com/v/t51.29350-15/119982924_607311840148065_3115697415636128755_n.jpg?_nc_cat=108&_nc_sid=8ae9d6&_nc_ohc=EDA3hPSpcY4AX94NcRA&_nc_ht=scontent.cdninstagram.com&oh=1fadca40a008e1c0c0f39f773c18f61d&oe=5F9B7B54
+
